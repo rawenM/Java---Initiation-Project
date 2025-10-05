@@ -21,14 +21,34 @@ public class Zoo {
     }*/
 
     boolean addAnimal(Animal animal){
-        for ( Animal i : animals ){
-            if (i.name == null){
-                 i = animal;
+        for ( int i=0 ; i <animals.length ; i++ ){
+            if (animals[i] == null){
+                animals[i] = animal;
                  System.out.println("successfully added!");
                 return true;
             }
-            System.out.println("Sorry, animals is full!");
         }
+        System.out.println("Sorry, animals is full!");
         return false;
+    }
+    void afficherAnimaux(){
+        for ( int i=0 ; i <animals.length ; i++ ){
+            if (animals[i] != null) {
+                System.out.println("animal number :" + i + "\n");
+                System.out.println("animal's name:" + animals[i].name + "\n");
+                System.out.println("animal's family:" + animals[i].family + "\n");
+                System.out.println("animal's age:" + animals[i].age + "\n");
+                System.out.println("Mammal? " + animals[i].isMammal + "\n");
+                System.out.println("****************");
+            }
+        }
+    }
+    int searchAnimal(Animal animal){
+        for ( int i=0 ; i <animals.length ; i++ ){
+            if (animals[i].name==animal.name){
+                return i;
+            }
+        }
+        return -1;
     }
 }
