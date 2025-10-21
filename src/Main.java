@@ -7,37 +7,38 @@ public class Main {
             ZooManagement zooManagement = new ZooManagement();
             System.out.println(zooManagement);
 
-            Scanner input = new Scanner(System.in);
-            System.out.print("Enter zoo name: ");
-            String zooN = input.nextLine(); //try .next()
-            System.out.print("Enter number of cages: ");
-            int nCages = input.nextInt();
+           // Scanner input = new Scanner(System.in);
+           // System.out.print("Enter zoo name: ");
+           // String zooN = input.nextLine(); //try .next()
+            //System.out.print("Enter number of cages: ");
+            //int nCages = input.nextInt();
 
-            boolean bool = zooManagement.verif(nCages, zooN);
+           /* boolean bool = zooManagement.verif(nCages, zooN);
 
             if (bool) {
                 ZooManagement zoo2 = new ZooManagement(nCages, zooN);
                 System.out.println(zoo2);
             } else System.out.println("Sorry zoo input is invalid");
-            input.close();
+            input.close(); */
 
-
+            // constructeur paramétré
             Animal lion = new Animal("A", "katous", 3, true);
-            Zoo myZoo = new Zoo("MyZoo", "elghazela", 8);
 
-            System.out.println(lion);
-            System.out.println("***********");
-            System.out.println(myZoo);
-            System.out.println("***********");
-            System.out.println(myZoo.toString()); //same this as the display b4
+            //Animal chat = new Animal("B", "psps", 7, true);
+            Zoo myZoo = new Zoo("MyZoo", "elghazela");
+            for (int i=1; i<= 25 ; i++){
+                myZoo.addAnimal(lion);
+                System.out.println(i);
+            }
+            //System.out.println(myZoo.toString()); //same this as the display b4
 
-            Animal chat = new Animal("B", "psps", 7, true);
-            Animal chat1 = new Animal("B", "psps", 7, true);
-            myZoo.addAnimal(lion);
-            myZoo.addAnimal(chat);
-            System.out.println(myZoo.searchAnimal(chat));
-            myZoo.addAnimal(chat1);
-            System.out.println(myZoo.searchAnimal(chat1));
+            //myZoo.addAnimal(lion);
+            //myZoo.addAnimal(chat);
             //myZoo.afficherAnimaux();
+            //System.out.println("now remove: ");
+            //myZoo.removeAnimal(chat);
+            //myZoo.afficherAnimaux();
+            System.out.println(myZoo.isZooFull());
+
         }
 }
