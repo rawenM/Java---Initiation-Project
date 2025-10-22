@@ -77,5 +77,21 @@ public class Zoo {
         return nbanimals == animals.length; // or nbanimals >= animals.length
     }
 
+    int countAnimals(){
+        int nbanimals = 0;
+        for (int i = 0; i < animals.length; i++) {
+            if (animals[i] != null) {
+                nbanimals++;
+            }
+        }
+        return nbanimals;
+    }
 
+    Zoo comparerZoo(Zoo z1, Zoo z2){
+        if (z1.countAnimals()> z2.countAnimals()){
+            return z1;
+        }
+        else
+            return z2;
+    }
 }

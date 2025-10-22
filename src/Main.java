@@ -26,10 +26,15 @@ public class Main {
 
             //Animal chat = new Animal("B", "psps", 7, true);
             Zoo myZoo = new Zoo("MyZoo", "elghazela");
+
+            Zoo myZoo2 = new Zoo("MyZoo2", "rades plage");
             for (int i=1; i<= 25 ; i++){
-                myZoo.addAnimal(lion);
+                myZoo2.addAnimal(lion);
                 System.out.println(i);
             }
+            Zoo test = new Zoo();
+            test = test.comparerZoo(myZoo,myZoo2);
+            System.out.println(test);
             //System.out.println(myZoo.toString()); //same this as the display b4
 
             //myZoo.addAnimal(lion);
@@ -38,7 +43,7 @@ public class Main {
             //System.out.println("now remove: ");
             //myZoo.removeAnimal(chat);
             //myZoo.afficherAnimaux();
-            System.out.println(myZoo.isZooFull());
+            //System.out.println(myZoo.isZooFull());
 
         }
 }
