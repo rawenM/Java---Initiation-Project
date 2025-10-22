@@ -1,11 +1,13 @@
-import java.util.Scanner;
+package tn.esprit.gestionzoo;
+
+import tn.esprit.gestionzoo.ZOOstuff.Animal;
+import tn.esprit.gestionzoo.ZOOstuff.Zoo;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
         public static void main(String[] args) {
-            ZooManagement zooManagement = new ZooManagement();
-            System.out.println(zooManagement);
+
 
            // Scanner input = new Scanner(System.in);
            // System.out.print("Enter zoo name: ");
@@ -24,17 +26,18 @@ public class Main {
             // constructeur paramétré
             Animal lion = new Animal("A", "katous", 3, true);
 
-            //Animal chat = new Animal("B", "psps", 7, true);
+            //tn.esprit.gestionzoo.ZOOstuff.Animal chat = new tn.esprit.gestionzoo.ZOOstuff.Animal("B", "psps", 7, true);
             Zoo myZoo = new Zoo("MyZoo", "elghazela");
 
             Zoo myZoo2 = new Zoo("MyZoo2", "rades plage");
-            for (int i=1; i<= 25 ; i++){
+            /*for (int i=1; i<= 10 ; i++){
                 myZoo2.addAnimal(lion);
                 System.out.println(i);
             }
-            Zoo test = new Zoo();
+            myZoo2.addAnimal(lion);*/
+            /*tn.esprit.gestionzoo.ZOOstuff.Zoo test = new tn.esprit.gestionzoo.ZOOstuff.Zoo();
             test = test.comparerZoo(myZoo,myZoo2);
-            System.out.println(test);
+            System.out.println(test);*/
             //System.out.println(myZoo.toString()); //same this as the display b4
 
             //myZoo.addAnimal(lion);
