@@ -1,7 +1,6 @@
 package tn.esprit.gestionzoo;
 
-import tn.esprit.gestionzoo.ZOOstuff.Animal;
-import tn.esprit.gestionzoo.ZOOstuff.Zoo;
+import tn.esprit.gestionzoo.ZOOstuff.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -47,6 +46,19 @@ public class Main {
             //myZoo.removeAnimal(chat);
             //myZoo.afficherAnimaux();
             //System.out.println(myZoo.isZooFull());
+
+            Terrestrial T = new Terrestrial("family1","Alpha",12,true,2);
+            Aquatic A = new Aquatic("family1","Alpha",12,true,"aquariumA");
+            Dolphin D = new Dolphin("family1","Alpha",12,true,"aquariumA",14);
+            Penguin P = new Penguin("family1","Alpha",12,true,"aquariumA",15);
+
+            System.out.println(T);
+            System.out.println(A);
+            System.out.println(D);
+            System.out.println(P);
+
+            A.swim();
+            D.swim(); P.swim();
 
         }
 }
