@@ -25,10 +25,12 @@ public class Main {
             // constructeur paramétré
             Animal lion = new Animal("A", "katous", 3, true);
 
-            //tn.esprit.gestionzoo.ZOOstuff.Animal chat = new tn.esprit.gestionzoo.ZOOstuff.Animal("B", "psps", 7, true);
+            Animal chat = new Animal("B", "psps", 7, true);
             Zoo myZoo = new Zoo("MyZoo", "elghazela");
 
+
             Zoo myZoo2 = new Zoo("MyZoo2", "rades plage");
+
             /*for (int i=1; i<= 10 ; i++){
                 myZoo2.addAnimal(lion);
                 System.out.println(i);
@@ -39,7 +41,7 @@ public class Main {
             System.out.println(test);*/
             //System.out.println(myZoo.toString()); //same this as the display b4
 
-            //myZoo.addAnimal(lion);
+            //myZoo.addAnimal(lion);myZoo.addAnimal(lion);
             //myZoo.addAnimal(chat);
             //myZoo.afficherAnimaux();
             //System.out.println("now remove: ");
@@ -48,17 +50,28 @@ public class Main {
             //System.out.println(myZoo.isZooFull());
 
             Terrestrial T = new Terrestrial("family1","Alpha",12,true,2);
-            Aquatic A = new Aquatic("family1","Alpha",12,true,"aquariumA");
+            //Aquatic A = new Aquatic("family1","Alpha",12,true,"aquariumA");
             Dolphin D = new Dolphin("family1","Alpha",12,true,"aquariumA",14);
             Penguin P = new Penguin("family1","Alpha",12,true,"aquariumA",15);
 
             System.out.println(T);
-            System.out.println(A);
+            //System.out.println(A);
             System.out.println(D);
             System.out.println(P);
 
-            A.swim();
+            //A.swim();
             D.swim(); P.swim();
+            Dolphin B = new Dolphin("family1","Alpha",12,true,"aquariumA",13);
+            Dolphin C = new Dolphin("family1","Alpha",12,true,"aquarium", 18);
+            myZoo2.addAquaticAnimal(D);
+            myZoo2.addAquaticAnimal(B);
+            myZoo2.addAquaticAnimal(C);
+            myZoo2.addAquaticAnimal(P);
+
+            System.out.println(B.equals(C));
+            //B.swim(); C.swim(); P.swim(); D.swim();
+            myZoo2.displayNumberOfAquaticsByType();
+
 
         }
 }

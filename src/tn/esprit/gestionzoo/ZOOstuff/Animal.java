@@ -50,4 +50,5 @@ public class Animal {
     public String toString(){
         return this.getFamily() + " " + this.getName() + " " + this.getAge() + " " + this.getMammal() ;
     }
+
 }
