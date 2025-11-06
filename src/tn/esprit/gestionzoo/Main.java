@@ -31,11 +31,14 @@ public class Main {
 
             Zoo myZoo2 = new Zoo("MyZoo2", "rades plage");
 
-            /*for (int i=1; i<= 10 ; i++){
-                myZoo2.addAnimal(lion);
-                System.out.println(i);
-            }
-            myZoo2.addAnimal(lion);*/
+            /*for (int i=0; i< myZoo2.getAnimals().length ; i++){
+                try {
+                    myZoo2.addAnimal(lion);
+                    System.out.println(i);
+                }catch(ZooFullException e) {
+                    System.out.println("sorry zoo is full");
+                }
+            }*/
             /*tn.esprit.gestionzoo.ZOOstuff.Zoo test = new tn.esprit.gestionzoo.ZOOstuff.Zoo();
             test = test.comparerZoo(myZoo,myZoo2);
             System.out.println(test);*/
@@ -68,10 +71,15 @@ public class Main {
             myZoo2.addAquaticAnimal(C);
             myZoo2.addAquaticAnimal(P);
 
-            System.out.println(B.equals(C));
+            //System.out.println(B.equals(C));
             //B.swim(); C.swim(); P.swim(); D.swim();
-            myZoo2.displayNumberOfAquaticsByType();
+            //myZoo2.displayNumberOfAquaticsByType();
 
+             try {
+                 myZoo2.addAnimal(chat);
+             }catch(ZooFullException e){
+                 System.out.println("sorry zoo is full");
+             }
 
         }
 }

@@ -62,25 +62,21 @@ public class Zoo {
         }
         return -1;
     }
-    public boolean addAnimal(Animal animal){
-        if (!isZooFull()) {
-            if (searchAnimal(animal) == -1) {
-                for (int i = 0; i < animals.length && i < 25; i++) {
-                    if (animals[i] == null) {
-                        animals[i] = animal;
-                        System.out.println("successfully added!");
-                        return true;
-                    }
+    public void addAnimal(Animal animal) throws ZooFullException {
+
+            if (searchAnimal(animal) != -1) { System.out.println("Sorry, animal already exists!"); return;}
+            for (int i = 0; i < animals.length && i < 25; i++) {
+                if (animals[i] == null) {
+                    animals[i] = animal;
+                    int x = countAnimals();
+                    System.out.println("successfully added!");
+                    System.out.println(x);
+                    return;
                 }
-                System.out.println("Sorry, animals is full!");
             }
-            System.out.println("Sorry, animal already exists!");
-            return false;
-        }
-        else
-            System.out.println("Your tn.esprit.gestionzoo.ZOOstuff.Zoo is full!");
-        return  false;
+            throw new ZooFullException("Zoo is full!");
     }
+
     void afficherAnimaux(){
         for ( int i=0 ; i <animals.length ; i++ ){
             if (animals[i] != null) {
