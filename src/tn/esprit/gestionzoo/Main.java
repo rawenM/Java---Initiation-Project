@@ -56,6 +56,9 @@ public class Main {
             //Aquatic A = new Aquatic("family1","Alpha",12,true,"aquariumA");
             Dolphin D = new Dolphin("family1","Alpha",12,true,"aquariumA",14);
             Penguin P = new Penguin("family1","Alpha",12,true,"aquariumA",15);
+            Penguin P1 = new Penguin("aquafamily","Alpha",12,true,"aquariumA",19);
+            myZoo.addAquaticAnimal(P);myZoo.addAquaticAnimal(P1);
+            System.out.println("oiiiaioooiiai"+myZoo.maxPenguinSwimmingDepth());
 
             System.out.println(T);
             //System.out.println(A);

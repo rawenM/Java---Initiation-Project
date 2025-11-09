@@ -145,7 +145,7 @@ public class Zoo {
         float max = -1;
         for (int i = 0; i < aquaticAnimals.length; i++) {
             if (aquaticAnimals[i] instanceof Penguin) {
-                float depth = ((Penguin) aquaticAnimals[i]).swimmingDepth;
+                float depth = ((Penguin) aquaticAnimals[i]).getSwimmingDepth();
                 if (depth > max) {
                     max = depth;
                 }

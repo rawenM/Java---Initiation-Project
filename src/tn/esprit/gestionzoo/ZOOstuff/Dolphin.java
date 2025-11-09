@@ -8,6 +8,14 @@ public class Dolphin extends Aquatic  {
         this.swimmingSpeed=s;
     }
 
+    public float getSwimmingSpeed() {
+        return swimmingSpeed;
+    }
+
+    public void setSwimmingSpeed(float swimmingSpeed) {
+        this.swimmingSpeed = swimmingSpeed;
+    }
+
     @Override
     public String toString(){
         return this.family + this.swimmingSpeed + this.name + this.habitat + this.age + this.isMammal ;
