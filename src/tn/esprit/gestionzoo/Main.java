@@ -1,6 +1,7 @@
 package tn.esprit.gestionzoo;
 
 import tn.esprit.gestionzoo.ZOOstuff.*;
+import tn.esprit.gestionzoo.interfaces.Food;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -83,6 +84,8 @@ public class Main {
              }catch(ZooFullException e){
                  System.out.println("sorry zoo is full");
              }
-
+            System.out.println("****************************************************************************************************");
+             P.eatMeat(Food.MEAT);
+             Terrestrial t = new Terrestrial(); t.eatPlantAndMeet(Food.BOTH);
         }
 }

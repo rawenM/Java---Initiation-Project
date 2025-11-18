@@ -1,6 +1,9 @@
 package tn.esprit.gestionzoo.ZOOstuff;
 
-public abstract class Aquatic extends Animal {
+import tn.esprit.gestionzoo.interfaces.Carnivore;
+import tn.esprit.gestionzoo.interfaces.Food;
+
+public abstract class Aquatic extends Animal implements Carnivore <Food> {
     protected String habitat;
 
     public Aquatic(){}
@@ -8,7 +11,9 @@ public abstract class Aquatic extends Animal {
         super(Family,name,age,isMam);
         this.habitat=h;
     }
-
+    public void eatMeat(Food meat){
+        System.out.println("eating" + meat);
+    }
     @Override
     public String toString(){
         return this.family + this.name + this.habitat + this.age + this.isMammal ;
